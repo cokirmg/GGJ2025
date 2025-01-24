@@ -633,11 +633,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 187001161242603332, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
   m_PrefabInstance: {fileID: 8421957333480813940}
   m_PrefabAsset: {fileID: 0}
---- !u!70 &1351821871 stripped
-CapsuleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 3428171695996377195, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
-  m_PrefabInstance: {fileID: 8421957333480813940}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1351821872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,7 +654,7 @@ MonoBehaviour:
     m_Bits: 8388608
   m_GroundCheck: {fileID: 1351821868}
   m_CeilingCheck: {fileID: 1351821868}
-  m_CrouchDisableCollider: {fileID: 1351821871}
+  m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -989,6 +984,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: burpy
       objectReference: {fileID: 0}
+    - target: {fileID: 1600370475031624275, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870593087772761471, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
+      propertyPath: runSpeed
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 3166634657462686574, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
+      propertyPath: m_Mass
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238623018551678340, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 46f1c1cf74ca7ec428f000785cb6c445, type: 2}
+    - target: {fileID: 9167212820279335979, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 46f1c1cf74ca7ec428f000785cb6c445, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

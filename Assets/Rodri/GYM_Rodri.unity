@@ -623,44 +623,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1351821867 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1319630850940745511, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
-  m_PrefabInstance: {fileID: 8421957333480813940}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1351821868 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 187001161242603332, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
-  m_PrefabInstance: {fileID: 8421957333480813940}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1351821872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351821867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29aa8aa3d0a72d4e960259f062685ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 400
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 0
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 8388608
-  m_GroundCheck: {fileID: 1351821868}
-  m_CeilingCheck: {fileID: 1351821868}
-  m_CrouchDisableCollider: {fileID: 0}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1631828475
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,33 +946,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: burpy
       objectReference: {fileID: 0}
-    - target: {fileID: 1600370475031624275, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
-      propertyPath: m_WhatIsGround.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 2870593087772761471, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
-      propertyPath: runSpeed
-      value: 69
-      objectReference: {fileID: 0}
-    - target: {fileID: 3166634657462686574, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
-      propertyPath: m_Mass
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5238623018551678340, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 46f1c1cf74ca7ec428f000785cb6c445, type: 2}
-    - target: {fileID: 9167212820279335979, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 46f1c1cf74ca7ec428f000785cb6c445, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5402144079941854429, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1319630850940745511, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1351821872}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

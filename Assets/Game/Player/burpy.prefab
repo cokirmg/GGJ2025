@@ -256,9 +256,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: dd4e43262364c834588433235a1c0c4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2870593087772761471}
-    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: dd4e43262364c834588433235a1c0c4a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5402144079941854429}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: dd4e43262364c834588433235a1c0c4a, type: 3}
 --- !u!4 &187001161242603332 stripped
 Transform:
@@ -435,31 +432,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1600370475031624275}
   runSpeed: 69
---- !u!114 &5402144079941854429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319630850940745511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29aa8aa3d0a72d4e960259f062685ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 400
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 0
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 8388608
-  m_GroundCheck: {fileID: 187001161242603332}
-  m_CeilingCheck: {fileID: 187001161242603332}
-  m_CrouchDisableCollider: {fileID: 0}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []

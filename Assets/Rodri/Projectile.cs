@@ -4,10 +4,15 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public bool rightShoot = true;
-    private float _projectileSpeed = 50f;
+    [SerializeField]
+    private float _projectileSpeed = 20f;
+    [SerializeField]
     private float _enemyGravity = -0.5f;
     
     private Rigidbody2D _rb2d;
+    
+    //TODO que la bala dure cierto tiempo
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,7 +36,7 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            //TODO Que el enemigo flote
+            
             
             other.gameObject.GetComponent<Rigidbody2D>().gravityScale = _enemyGravity;
             Destroy(this.gameObject);

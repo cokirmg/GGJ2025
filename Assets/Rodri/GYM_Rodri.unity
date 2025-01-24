@@ -1080,6 +1080,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: burpy
       objectReference: {fileID: 0}
+    - target: {fileID: 1600370475031624275, guid: 84d1ab1e1d01e9c49b6ad8c41a20a656, type: 3}
+      propertyPath: m_AirControl
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -10,14 +10,30 @@ public class Enemy_HorMov : MonoBehaviour
 
     private Vector2 direction = Vector2.right;
     private bool isStopped = false;
+    public GameObject dir;
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.SetBool("Andar", false); 
+        }
+    }
 
     void Update()
     {
-
-        if (isStopped) return;
+        if (isStopped)
+        {
+            
+            UpdateAnimation(false);
+            return;
+        }
 
 
         transform.Translate(direction * speed * Time.deltaTime);
+        UpdateAnimation(true);
 
         CheckForObstacles();
     }
@@ -25,7 +41,7 @@ public class Enemy_HorMov : MonoBehaviour
     private void CheckForObstacles()
     {
 
-        Debug.DrawRay(transform.position, direction * rayDistance, Color.red);
+        Debug.DrawRay(dir.transform.position, direction * rayDistance, Color.red);
         Debug.DrawRay(transform.position + Vector3.down * 0.5f, Vector2.down * groundRayDistance, Color.blue); 
 
         RaycastHit2D wallHit = Physics2D.Raycast(transform.position, direction, rayDistance, Obstacle);
@@ -44,10 +60,10 @@ public class Enemy_HorMov : MonoBehaviour
     {
 
         direction = -direction;
-        
-        // Voltear el sprite (opcional)
+
+ 
         Vector3 scale = transform.localScale;
-        scale.x *= -1;
+        scale.x = direction.x > 0 ? Mathf.Abs(scale.x) : -Mathf.Abs(scale.x);
         transform.localScale = scale;
     }
 
@@ -56,7 +72,8 @@ public class Enemy_HorMov : MonoBehaviour
 
         if (collision.CompareTag("Bubble"))
         {
-            isStopped = true; // Detener al enemigo
+            isStopped = true;
+            UpdateAnimation(false); 
         }
     }
 
@@ -66,8 +83,17 @@ public class Enemy_HorMov : MonoBehaviour
         if (collision.CompareTag("Bubble"))
         {
             isStopped = false;
+            UpdateAnimation(true);
         }
     }
-    
+    private void UpdateAnimation(bool isWalking)
+    {
+        if (animator != null)
+        {
+            animator.SetBool("Andar", isWalking);
+        }
+    }
+
+
     //TODO hacer que el enemigo muera
 }

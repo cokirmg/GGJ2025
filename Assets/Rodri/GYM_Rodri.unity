@@ -663,6 +663,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 226599460391526970, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 474738613366094451, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.43
@@ -718,6 +722,14 @@ PrefabInstance:
     - target: {fileID: 3463562812713777479, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
       propertyPath: m_Name
       value: burpy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463562812713777479, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002172358340933996, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6214313161669083274, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
       propertyPath: m_CrouchDisableCollider

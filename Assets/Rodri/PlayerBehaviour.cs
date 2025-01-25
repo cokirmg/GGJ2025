@@ -18,6 +18,9 @@ public class PlayerBehaviour : MonoBehaviour
     private float _shootCooldown = 0.5f;
     private bool _canShoot = true;
     private Animator anim;
+    [SerializeField]
+    private Animator dieAnimator;
+    
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -80,5 +83,12 @@ public class PlayerBehaviour : MonoBehaviour
     {
         //TODO maybe una corrutina de muerte y luego este spawn, esto temporal
         this.transform.position = _spawnPoint.transform.position;
+    }
+
+    IEnumerator DamageCoroutine()
+    {
+        
+        yield return new WaitForSeconds(0.3f);
+        GetDamage();
     }
 }

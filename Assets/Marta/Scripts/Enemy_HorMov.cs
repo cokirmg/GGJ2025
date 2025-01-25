@@ -80,12 +80,8 @@ public class Enemy_HorMov : MonoBehaviour
         }
     }
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
     
     //TODO hacer que el enemigo muera
-=======
-   
->>>>>>> Stashed changes
 =======
    
 >>>>>>> Stashed changes

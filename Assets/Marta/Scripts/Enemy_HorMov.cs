@@ -7,10 +7,21 @@ public class Enemy_HorMov : MonoBehaviour
     public float groundRayDistance = 1.5f;
     public LayerMask Obstacle;
     public LayerMask Ground;
+    public GameObject Dir;
 
     private Vector2 direction = Vector2.right;
     private bool isStopped = false;
+    public Animator animator;
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.Play("andar_anchoa"); 
+        }
+
+    }
     void Update()
     {
 
@@ -25,7 +36,7 @@ public class Enemy_HorMov : MonoBehaviour
     private void CheckForObstacles()
     {
 
-        Debug.DrawRay(transform.position, direction * rayDistance, Color.red);
+        Debug.DrawRay(Dir.transform.position, direction * rayDistance, Color.red);
         Debug.DrawRay(transform.position + Vector3.down * 0.5f, Vector2.down * groundRayDistance, Color.blue); 
 
         RaycastHit2D wallHit = Physics2D.Raycast(transform.position, direction, rayDistance, Obstacle);
@@ -68,6 +79,10 @@ public class Enemy_HorMov : MonoBehaviour
             isStopped = false;
         }
     }
+<<<<<<< Updated upstream
     
     //TODO hacer que el enemigo muera
+=======
+   
+>>>>>>> Stashed changes
 }

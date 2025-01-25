@@ -9,6 +9,8 @@ TagManager:
   - Bubble
   - Components
   - EnemyBubble
+  - die
+  - Spawn
   layers:
   - Default
   - TransparentFX

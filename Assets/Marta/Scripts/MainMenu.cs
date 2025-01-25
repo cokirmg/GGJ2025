@@ -1,0 +1,36 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class MainMenu : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    public void Game()
+    {
+        SceneManager.LoadScene("Minigame");
+    }
+
+    public void Options()
+    {
+        SceneManager.LoadScene("Options");
+    }
+
+    public void Return()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+}

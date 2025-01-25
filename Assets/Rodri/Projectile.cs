@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
     public bool rightShoot = true;
     [SerializeField]
     private float _projectileSpeed = 20f;
+
     [SerializeField]
     private float _enemyGravity = -3f;
     

@@ -364,13 +364,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256823238}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.45, z: 0}
-  m_LocalScale: {x: 1.0395, y: 6.0176425, z: 1}
+  m_LocalScale: {x: 5.97, y: 1.16, z: 0.47138047}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &256823242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -456,9 +456,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb8a4a88e90c7d449df7d90cd6d8a91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigCube: {fileID: 256823240}
-  cubePrefab: {fileID: 6568647931535576994, guid: 4c99138e967f06f459942fd4fe903446, type: 3}
-  newCubePosition: {x: 0, y: -1.2, z: 0}
+  GastricAcid: {fileID: 256823240}
+  Burpee: {fileID: 5857069893856435972, guid: 3e05b71335b02954f9b7a51dea46aa99, type: 3}
+  BurpeePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &384556828
 GameObject:
   m_ObjectHideFlags: 0

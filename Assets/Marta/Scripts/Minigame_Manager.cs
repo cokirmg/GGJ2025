@@ -1,27 +1,29 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 
 public class Minigame_Manager : MonoBehaviour
 {
-    public Transform GastricAcid;              
-    public GameObject Burpee;         
-    public Vector3 BurpeePosition;       
+    public Transform GastricAcid;         
+    public GameObject Burpee;             
+    public Vector3 BurpeePosition;         
 
     private List<GameObject> Components = new List<GameObject>(); 
-    private bool isShaking = false;      
-    private float shakeThreshold = 6000f;   
+    private bool isShaking = false;       
+    private float shakeThreshold = 6000f; 
     private float mouseDistance = 0f;      
-    private Vector3 lastMousePosition;    
+    private Vector3 lastMousePosition;     
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-     
         if (other.CompareTag("Components"))
         {
+            // Añadir el componente recogido
             Components.Add(other.gameObject);
 
+           
             if (Components.Count == 5 && !isShaking)
             {
                 DestroyComponents();
@@ -32,45 +34,42 @@ public class Minigame_Manager : MonoBehaviour
 
     private void DestroyComponents()
     {
-       
+        // Destruir los componentes recogidos
         foreach (GameObject cube in Components)
         {
             Destroy(cube);
         }
         Components.Clear();
-        Debug.Log("Components eliminados.");
+        Debug.Log("Componentes eliminados.");
     }
 
     private void StartMouseShake()
     {
-        Debug.Log("Mueve el ratón a lo loco para instanciar el nuevo cubo.");
+        Debug.Log("Mueve el ratón para instanciar el Burpee.");
         isShaking = true;
-        mouseDistance = 0f; // Reiniciar la distancia acumulada del ratón
-        lastMousePosition = Input.mousePosition; // Registrar la posición inicial del ratón
+        mouseDistance = 0f; // Reiniciar la distancia acumulada
+        lastMousePosition = Input.mousePosition; // Registrar posición inicial del ratón
     }
 
     private void Update()
     {
         if (isShaking)
         {
+            // Calcular la distancia acumulada del movimiento del ratón
             Vector3 currentMousePosition = Input.mousePosition;
-
-            // Calcular la distancia entre la posición actual y la última
             float distance = Vector3.Distance(currentMousePosition, lastMousePosition);
 
-            if (distance > 0.1f) 
+            if (distance > 0.1f)
             {
                 mouseDistance += distance;
                 Debug.Log($"Distancia acumulada: {mouseDistance}/{shakeThreshold}");
             }
 
-            // Actualizar la última posición del ratón
             lastMousePosition = currentMousePosition;
 
-            // Verificar si la distancia acumulada es suficiente
+            // Si se supera el umbral, instanciar el Burpee
             if (mouseDistance >= shakeThreshold)
             {
-               
                 InstantiateBurpee();
             }
         }
@@ -78,8 +77,29 @@ public class Minigame_Manager : MonoBehaviour
 
     private void InstantiateBurpee()
     {
-        Instantiate(Burpee, BurpeePosition, Quaternion.identity);
-        Debug.Log("BURPEEEE");
+      
+        GameObject newBurpee = Instantiate(Burpee, BurpeePosition, Quaternion.Euler(0,0,90));
+        Animator burpeeAnimator = newBurpee.GetComponent<Animator>();
+
+        if (burpeeAnimator != null)
+        {
+            // Iniciar la animación de nacimiento
+            StartCoroutine(PlayBirthAnimation(burpeeAnimator));
+        }
+
+        Debug.Log("BURPEEEE creado.");
         isShaking = false;
+    }
+
+    private System.Collections.IEnumerator PlayBirthAnimation(Animator burpeeAnimator)
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        burpeeAnimator.SetTrigger("Birth");
+
+        yield return new WaitForSeconds(burpeeAnimator.GetCurrentAnimatorStateInfo(0).length);
+
+      
+        SceneManager.LoadScene("GYM_Marta");
     }
 }

@@ -10,7 +10,7 @@ public class SO_SFXList : ScriptableObject
 
     private Dictionary<SFX_Type, AudioClip> soundDictionary;
 
-    private void OnEnable()
+    private void OnValidate()
     {
         //Rellena el diccionario con la lista de SFX
         foreach (var soundEffect in soundEffects)

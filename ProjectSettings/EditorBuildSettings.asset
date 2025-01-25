@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Marta/Cinematica.unity
+    guid: 02e3a5b4ff5b70d45801d1cab4bb7a20
+  - enabled: 0
     path: Assets/Marta/OptionsMenu.unity
     guid: 071103e9c29a62541ab21eda67d20efe
   - enabled: 1

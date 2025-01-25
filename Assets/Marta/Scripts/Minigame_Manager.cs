@@ -14,7 +14,13 @@ public class Minigame_Manager : MonoBehaviour
     private bool isShaking = false;       
     private float shakeThreshold = 6000f; 
     private float mouseDistance = 0f;      
-    private Vector3 lastMousePosition;     
+    private Vector3 lastMousePosition;
+
+    private void Start()
+    {
+        Burpee.GetComponent<GameObject>().SetActive(false);
+        //Burpee.SetActive(false);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -77,9 +83,10 @@ public class Minigame_Manager : MonoBehaviour
 
     private void InstantiateBurpee()
     {
-      
-        GameObject newBurpee = Instantiate(Burpee, BurpeePosition, Quaternion.Euler(0,0,90));
-        Animator burpeeAnimator = newBurpee.GetComponent<Animator>();
+        Burpee.GetComponent<GameObject>().SetActive(true);
+
+        //GameObject newBurpee = Instantiate(Burpee, BurpeePosition, Quaternion.Euler(0,0,90));
+        Animator burpeeAnimator = Burpee.GetComponent<Animator>();
 
         if (burpeeAnimator != null)
         {

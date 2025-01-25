@@ -36,8 +36,6 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            
-            
             other.gameObject.GetComponent<Rigidbody2D>().gravityScale = _enemyGravity;
             other.gameObject.tag = "EnemyBubble";
             Debug.Log(other.gameObject.tag);

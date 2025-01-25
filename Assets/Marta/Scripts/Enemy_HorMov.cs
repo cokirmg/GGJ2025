@@ -10,6 +10,7 @@ public class Enemy_HorMov : MonoBehaviour
 
     private Vector2 direction = Vector2.right;
     private bool isStopped = false;
+
     void Update()
     {
 

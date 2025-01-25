@@ -31,7 +31,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 187001161242603332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4076201825594769615
+--- !u!1 &3131493528492725365
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,24 +39,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5637022578016887679}
+  - component: {fileID: 8337384875092202296}
   m_Layer: 22
-  m_Name: ProjectileSpawn
+  m_Name: projectileSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5637022578016887679
+--- !u!4 &8337384875092202296
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4076201825594769615}
+  m_GameObject: {fileID: 3131493528492725365}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.98, y: 1.89, z: 0}
+  m_LocalPosition: {x: 1.16, y: 1.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -230,13 +230,13 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: dd4e43262364c834588433235a1c0c4a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5637022578016887679}
-    - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: dd4e43262364c834588433235a1c0c4a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6245320449240117907}
     - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: dd4e43262364c834588433235a1c0c4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6650736552796814488}
+    - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: dd4e43262364c834588433235a1c0c4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8337384875092202296}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: dd4e43262364c834588433235a1c0c4a, type: 3}
       insertIndex: -1
@@ -307,7 +307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectile: {fileID: 7672072956632910661, guid: 494ce4d8f5e25144c9bdf5fa2a8e7cc3, type: 3}
-  _spawnPoint: {fileID: 4076201825594769615}
+  _spawnPoint: {fileID: 0}
+  _projectileSpawnPoint: {fileID: 3131493528492725365}
 --- !u!114 &1600370475031624275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +324,7 @@ MonoBehaviour:
   m_JumpForce: 400
   m_CrouchSpeed: 0.242
   m_MovementSmoothing: 0.05
-  m_AirControl: 0
+  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295

@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Bubble
   - Components
+  - EnemyBubble
   layers:
   - Default
   - TransparentFX

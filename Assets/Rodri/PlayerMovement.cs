@@ -10,15 +10,36 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
-    
+    private Animator anim;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
+        
+        if (Input.GetAxisRaw("Horizontal") !=0)
+        {
+            anim.SetBool("Andar", true);
+        }
+        else
+        {
+            anim.SetBool("Andar", false);
+        }
         if (Input.GetButtonDown("Jump"))
         {
+            anim.SetTrigger("Salto");
+            anim.SetBool("Salto_aire", true);
             jump = true;
+        }
+        if (Input.GetButtonUp("Jump"))
+        {
+            
+            anim.SetBool("Salto_aire", false);
+            
         }
 
         if (Input.GetButtonDown("Crouch"))

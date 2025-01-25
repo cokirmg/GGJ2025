@@ -167,3 +167,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightShoot: 1
   _projectileSpeed: 20
+  _enemyGravity: -0.2

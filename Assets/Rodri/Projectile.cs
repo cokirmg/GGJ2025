@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     private float _projectileSpeed = 20f;
     [SerializeField]
-    private float _enemyGravity = -0.5f;
+    private float _enemyGravity = -3f;
     
     private Rigidbody2D _rb2d;
     
@@ -39,6 +39,8 @@ public class Projectile : MonoBehaviour
             
             
             other.gameObject.GetComponent<Rigidbody2D>().gravityScale = _enemyGravity;
+            other.gameObject.tag = "EnemyBubble";
+            Debug.Log(other.gameObject.tag);
             Destroy(this.gameObject);
         }
     }

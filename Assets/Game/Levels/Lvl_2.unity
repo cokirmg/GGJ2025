@@ -664,6 +664,11 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 1.91}
   m_Size: {x: 0.99, y: 1.82}
   m_Direction: 0
+--- !u!50 &1033176666 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 57275161813425990, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
+  m_PrefabInstance: {fileID: 1648578439}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1350903951
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,11 +995,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3411865868830909016, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6020149
+      value: 0.63156784
       objectReference: {fileID: 0}
     - target: {fileID: 3411865868830909016, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7984849
+      value: 0.77532065
       objectReference: {fileID: 0}
     - target: {fileID: 3463562812713777479, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
       propertyPath: m_Name
@@ -1034,11 +1039,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4578250176801771417, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7666263
+      value: 0.7091615
       objectReference: {fileID: 0}
     - target: {fileID: 4578250176801771417, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.64209354
+      value: 0.7050461
       objectReference: {fileID: 0}
     - target: {fileID: 5271972273090210346, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
       propertyPath: m_SortingLayer
@@ -1183,7 +1188,7 @@ PrefabInstance:
     - target: {fileID: 3586222114055628057, guid: aaf22483851c0094ab6939cdfb8139bb, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1033176666}
     - target: {fileID: 3586222114055628057, guid: aaf22483851c0094ab6939cdfb8139bb, type: 3}
       propertyPath: movementVelocity
       value: 0.1

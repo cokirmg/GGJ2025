@@ -1311,6 +1311,11 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 1.91}
   m_Size: {x: 0.99, y: 1.82}
   m_Direction: 0
+--- !u!50 &1322607538 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 57275161813425990, guid: a377c3cd00ba9c94d84d809810447fcd, type: 3}
+  m_PrefabInstance: {fileID: 1322607535}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1387375782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,7 +1870,7 @@ PrefabInstance:
     - target: {fileID: 3586222114055628057, guid: aaf22483851c0094ab6939cdfb8139bb, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1322607538}
     - target: {fileID: 3586222114055628057, guid: aaf22483851c0094ab6939cdfb8139bb, type: 3}
       propertyPath: movementVelocity
       value: 0.1

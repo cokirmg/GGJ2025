@@ -139,7 +139,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100000
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -166,9 +166,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c271e2b574862aa4db201eb5735a31f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightShoot: 1
+  rightShoot: 0
   _projectileSpeed: 20
   _enemyGravity: -0.2
+  hitWall: 0
 --- !u!61 &7079225488526286183
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -176,7 +177,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7672072956632910661}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}

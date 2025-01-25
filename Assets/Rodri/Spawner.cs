@@ -19,7 +19,16 @@ public class Spawner : MonoBehaviour
     {
         
         yield return new WaitForSeconds(1f);
+        Instantiate(enemyObject, transform.position, Quaternion.identity);
         
-        
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+       
+        if (other.gameObject.tag == "EnemyBubble")
+        {
+            SpawnEnemies();
+            Destroy(other.gameObject);
+        }
     }
 }

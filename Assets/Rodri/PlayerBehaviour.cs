@@ -18,7 +18,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     [SerializeField] private GameObject dieEffect;
     private bool dying = true;
-    
+
+    private GameObject projectile;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -60,9 +61,13 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (_canShoot)
         {
+            if (projectile !=null)
+            {
+                Destroy(projectile);
+            }
             _canShoot = false;
             yield return new WaitForSeconds(0.3f);
-            Instantiate(_projectile, _projectileSpawnPoint.transform.position, Quaternion.identity);
+            projectile = Instantiate(_projectile, _projectileSpawnPoint.transform.position, Quaternion.identity);
             
             yield return new WaitForSeconds(_shootCooldown);
             _canShoot = true;

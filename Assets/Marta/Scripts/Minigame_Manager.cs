@@ -102,6 +102,6 @@ public class Minigame_Manager : MonoBehaviour
         yield return new WaitForSeconds(wait);
         
       
-        SceneManager.LoadScene("Menu_Inicio");
+        SceneManager.LoadScene("Level_1");
     }
 }

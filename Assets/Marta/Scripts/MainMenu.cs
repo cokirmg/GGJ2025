@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
     }
     public void Game()
     {
-        SceneManager.LoadScene("Minigame");
+        SceneManager.LoadScene("Cinematica");
     }
 
     public void Options()

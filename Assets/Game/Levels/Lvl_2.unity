@@ -714,9 +714,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7383437224147143069, guid: 4cd0e76ae43de5e40a5898f709394b90, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7394935973166435088, guid: 4cd0e76ae43de5e40a5898f709394b90, type: 3}
       propertyPath: m_Name
       value: LaPescailla
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394935973166435088, guid: 4cd0e76ae43de5e40a5898f709394b90, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

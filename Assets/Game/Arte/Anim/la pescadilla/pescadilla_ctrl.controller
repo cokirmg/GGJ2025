@@ -1,6 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< Updated upstream
 --- !u!1102 &-8031401875981065429
 AnimatorState:
   serializedVersion: 6
@@ -54,8 +53,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
-=======
->>>>>>> Stashed changes
 --- !u!1107 &-4274132613010958014
 AnimatorStateMachine:
   serializedVersion: 6
@@ -66,7 +63,6 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-<<<<<<< Updated upstream
     m_State: {fileID: -8031401875981065429}
     m_Position: {x: 30, y: 180, z: 0}
   - serializedVersion: 1
@@ -75,10 +71,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1991983655717104777}
     m_Position: {x: 300, y: 210, z: 0}
-=======
-    m_State: {fileID: -915766761262141873}
-    m_Position: {x: 110, y: 270, z: 0}
->>>>>>> Stashed changes
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -88,7 +80,6 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-<<<<<<< Updated upstream
   m_DefaultState: {fileID: -8031401875981065429}
 --- !u!91 &9100000
 AnimatorController:
@@ -125,10 +116,6 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
 --- !u!1102 &1815624873668585235
-=======
-  m_DefaultState: {fileID: -915766761262141873}
---- !u!1102 &-915766761262141873
->>>>>>> Stashed changes
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -156,7 +143,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
-<<<<<<< Updated upstream
 --- !u!1102 &1991983655717104777
 AnimatorState:
   serializedVersion: 6
@@ -258,27 +244,3 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
-=======
---- !u!91 &9100000
-AnimatorController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: pescadilla_ctrl
-  serializedVersion: 5
-  m_AnimatorParameters: []
-  m_AnimatorLayers:
-  - serializedVersion: 5
-    m_Name: Base Layer
-    m_StateMachine: {fileID: -4274132613010958014}
-    m_Mask: {fileID: 0}
-    m_Motions: []
-    m_Behaviours: []
-    m_BlendingMode: 0
-    m_SyncedLayerIndex: -1
-    m_DefaultWeight: 0
-    m_IKPass: 0
-    m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 9100000}
->>>>>>> Stashed changes

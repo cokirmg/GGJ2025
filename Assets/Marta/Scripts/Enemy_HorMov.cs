@@ -50,7 +50,7 @@ public class Enemy_HorMov : MonoBehaviour
         RaycastHit2D groundHit = Physics2D.Raycast(transform.position + Vector3.down * 0.5f, Vector2.down, groundRayDistance, Ground);
 
 
-        if (wallHit.collider != null || groundHit.collider == null)
+        if (wallHit.collider != null )
         {
             ChangeDirection();
         }
@@ -95,5 +95,5 @@ public class Enemy_HorMov : MonoBehaviour
     }
 
 
-    //TODO hacer que el enemigo muera
+    
 }

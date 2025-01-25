@@ -40,7 +40,7 @@ public class WaypointEnemyBehaviour : MonoBehaviour
         //Hemos llegado a nuestro destino, actualizémoslo 
         if (Vector3.Distance(transform.position, actualWaypoint) < waypointThreshold)
         {
-            //Si hemos llegado al máximo de la lista 
+            //Si hemos llegado al máximo de la lista da la vuelta
 
             if(waypointIndex + 1 >= waypointList.Count)
                 goingBack = true;

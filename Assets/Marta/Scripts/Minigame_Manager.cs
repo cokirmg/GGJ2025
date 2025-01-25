@@ -20,7 +20,7 @@ public class Minigame_Manager : MonoBehaviour
     {
         if (other.CompareTag("Components"))
         {
-            // Añadir el componente recogido
+            // Aï¿½adir el componente recogido
             Components.Add(other.gameObject);
 
            
@@ -45,17 +45,17 @@ public class Minigame_Manager : MonoBehaviour
 
     private void StartMouseShake()
     {
-        Debug.Log("Mueve el ratón para instanciar el Burpee.");
+        Debug.Log("Mueve el ratï¿½n para instanciar el Burpee.");
         isShaking = true;
         mouseDistance = 0f; // Reiniciar la distancia acumulada
-        lastMousePosition = Input.mousePosition; // Registrar posición inicial del ratón
+        lastMousePosition = Input.mousePosition; // Registrar posiciï¿½n inicial del ratï¿½n
     }
 
     private void Update()
     {
         if (isShaking)
         {
-            // Calcular la distancia acumulada del movimiento del ratón
+            // Calcular la distancia acumulada del movimiento del ratï¿½n
             Vector3 currentMousePosition = Input.mousePosition;
             float distance = Vector3.Distance(currentMousePosition, lastMousePosition);
 
@@ -83,7 +83,7 @@ public class Minigame_Manager : MonoBehaviour
 
         if (burpeeAnimator != null)
         {
-            // Iniciar la animación de nacimiento
+            // Iniciar la animaciï¿½n de nacimiento
             StartCoroutine(PlayBirthAnimation(burpeeAnimator));
         }
 
@@ -96,10 +96,12 @@ public class Minigame_Manager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         burpeeAnimator.SetTrigger("Birth");
-
-        yield return new WaitForSeconds(burpeeAnimator.GetCurrentAnimatorStateInfo(0).length);
-
+       
+        float wait = burpeeAnimator.GetCurrentAnimatorStateInfo(0).length;
+        Debug.Log(wait);
+        yield return new WaitForSeconds(wait);
+        
       
-        SceneManager.LoadScene("GYM_Marta");
+        SceneManager.LoadScene("Menu_Inicio");
     }
 }

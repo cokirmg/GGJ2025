@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -33,13 +34,14 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetTrigger("Salto");
             anim.SetBool("Salto_aire", true);
+            //Debug.Log(anim.GetBool("Salto_aire"));
             jump = true;
         }
         if (Input.GetButtonUp("Jump"))
         {
-            
-            anim.SetBool("Salto_aire", false);
-            
+            StartCoroutine(jumpCoroutine());
+            //anim.SetBool("Salto_aire", false);
+
         }
 
         if (Input.GetButtonDown("Crouch"))
@@ -54,7 +56,15 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
+        
+    }
+
+    IEnumerator jumpCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        anim.SetBool("Salto_aire", false);
     }
 }

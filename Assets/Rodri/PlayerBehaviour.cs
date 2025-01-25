@@ -7,20 +7,17 @@ using UnityEngine.Rendering.Universal;
 public class PlayerBehaviour : MonoBehaviour
 {
     
-    [SerializeField]
-    private GameObject _projectile;
-    [SerializeField]
-    private GameObject _spawnPoint;
-    [SerializeField]
-    private GameObject _projectileSpawnPoint;
+    [SerializeField] private GameObject _projectile;
+    [SerializeField] private GameObject _spawnPoint;
+    [SerializeField] private GameObject _projectileSpawnPoint;
     private Rigidbody2D _rb2d;
 
     private float _shootCooldown = 0.5f;
     private bool _canShoot = true;
     private Animator anim;
-    [SerializeField]
-    private Animator dieAnimator;
-    
+
+    [SerializeField] private GameObject dieEffect;
+    private bool dying = true;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -76,7 +73,11 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            GetDamage();
+            if (dying)
+            {
+                StartCoroutine(DamageCoroutine());
+            }
+            
         }
     }
     void GetDamage()
@@ -87,8 +88,24 @@ public class PlayerBehaviour : MonoBehaviour
 
     IEnumerator DamageCoroutine()
     {
+        dying = false;
         
-        yield return new WaitForSeconds(0.3f);
-        GetDamage();
+                    dieEffect.SetActive(true);
+                    anim.SetTrigger("Morir");
+                    yield return new WaitForSeconds(0.05f);
+                    dieEffect.SetActive(false);
+                    yield return new WaitForSeconds(0.05f);
+                    dieEffect.SetActive(true);
+                    yield return new WaitForSeconds(0.05f);
+                    dieEffect.SetActive(false);
+                    yield return new WaitForSeconds(0.05f);
+                    dieEffect.SetActive(true);
+                    yield return new WaitForSeconds(0.05f);
+                    dieEffect.SetActive(false);
+                    yield return new WaitForSeconds(0.35f);
+                    GetDamage();
+        
+
+        dying = true;
     }
 }

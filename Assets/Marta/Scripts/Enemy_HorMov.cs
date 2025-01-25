@@ -43,7 +43,7 @@ public class Enemy_HorMov : MonoBehaviour
     {
 
         direction = -direction;
-
+        
         // Voltear el sprite (opcional)
         Vector3 scale = transform.localScale;
         scale.x *= -1;
@@ -67,4 +67,6 @@ public class Enemy_HorMov : MonoBehaviour
             isStopped = false;
         }
     }
+    
+    //TODO hacer que el enemigo muera
 }

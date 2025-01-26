@@ -51,6 +51,7 @@ public class Projectile : MonoBehaviour
         {
             if (!hitWall)
             {
+                
                 Debug.Log("HitWall");
                 enemyWallHit();
             }
@@ -65,7 +66,7 @@ public class Projectile : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<Rigidbody2D>().gravityScale = _enemyGravity;
-            
+            other.gameObject.GetComponent<Animator>().SetBool("Encapsulado", true);
             other.gameObject.tag = "EnemyBubble";
             other.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
             other.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;

@@ -41,14 +41,17 @@ public class PlayerBehaviour : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     void Shoot()
     {
+        SoundManager.Instance.PlaySFXSound(SFX_Type.SFX_Burpy_Shoot);
+
         Projectile scriptProjectile = _projectile.GetComponent<Projectile>();
-        if (Input.GetAxis("Horizontal") > 0)
+
+        if (gameObject.transform.localScale.x >= 0)
         {
             //Ataque hacia derecha
             scriptProjectile.rightShoot = true;
 
         }
-        else if (Input.GetAxis("Horizontal") < -0.01f)
+        else
         {
             //Ataque hacia izquierda
             scriptProjectile.rightShoot = false;
@@ -80,6 +83,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if (dying)
             {
+                SoundManager.Instance.PlaySFXSound(SFX_Type.SFX_Burpy_Death);
                 StartCoroutine(DamageCoroutine());
             }
             
@@ -109,7 +113,6 @@ public class PlayerBehaviour : MonoBehaviour
                     dieEffect.SetActive(false);
                     yield return new WaitForSeconds(0.35f);
                     GetDamage();
-        
 
         dying = true;
     }

@@ -55,10 +55,15 @@ public class CharacterController2D : MonoBehaviour
 			{
 				//m_Animator.SetBool("Salto_aire", false);
 				m_Grounded = true;
+
 				if (!wasGrounded)
+                {
 					OnLandEvent.Invoke();
+                }
 			}
+
 		}
+
 	}
 
 

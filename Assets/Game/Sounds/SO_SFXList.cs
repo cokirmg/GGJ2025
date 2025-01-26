@@ -12,6 +12,8 @@ public class SO_SFXList : ScriptableObject
 
     private void OnValidate()
     {
+        soundDictionary = new Dictionary<SFX_Type, AudioClip>();
+
         //Rellena el diccionario con la lista de SFX
         foreach (var soundEffect in soundEffects)
         {
@@ -46,7 +48,8 @@ public enum SFX_Type
     SFX_Pinha_Fly,
     SFX_UI_Click,
     SFX_UI_Transition,
-    BSO_1
+    BSO_1,
+    SFX_Burpy_Landing
 }
 
 [System.Serializable]

@@ -7,6 +7,11 @@ public class SoundManager : MonoBehaviour
     public SO_SFXList sfxList;
 
     public AudioSource sfxAudioSource;
+    private void Awake()
+    {
+        if(Instance == null)
+            Instance = this;    
+    }
 
     private void Start()
     {

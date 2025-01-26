@@ -33,3 +33,5 @@ MonoBehaviour:
     type: 8
   - SFX: {fileID: 8300000, guid: 5ef25e5a7f9b0d340ac3389139a1e721, type: 3}
     type: 8
+  - SFX: {fileID: 8300000, guid: 078db2ab0e2eed44fa5973d0b791aae4, type: 3}
+    type: 10

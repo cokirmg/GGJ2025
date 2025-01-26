@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump"))
         {
+            SoundManager.Instance.PlaySFXSound(SFX_Type.SFX_Burpy_Jump);
             anim.SetTrigger("Salto");
             anim.SetBool("Salto_aire", true);
             //Debug.Log(anim.GetBool("Salto_aire"));

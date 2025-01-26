@@ -6393,7 +6393,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click and move the components
+  m_text: 'Click and move
+
+    Mix the components'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29fa9749cb313ca4aafb68260c32d995, type: 2}
   m_sharedMaterial: {fileID: -3373827501889280649, guid: 29fa9749cb313ca4aafb68260c32d995, type: 2}

@@ -27,25 +27,33 @@ public class Minijuego : MonoBehaviour
     {
         if (other.CompareTag("Components"))
         {
-            Components.Add(other.gameObject);
+          
+            if (!Components.Contains(other.gameObject))
+            {
+                Components.Add(other.gameObject);
+                StartCoroutine(DestroyAfterDelay(other.gameObject, 5f));
+            }
 
+ 
             if (Components.Count == 5 && !isShaking)
             {
-                DestroyComponents();
                 StartMouseShake();
             }
         }
     }
 
-    private void DestroyComponents()
+    private IEnumerator DestroyAfterDelay(GameObject component, float delay)
     {
-        foreach (GameObject cube in Components)
+        yield return new WaitForSeconds(delay);
+
+        if (component != null) 
         {
-            Destroy(cube);
+            Components.Remove(component); // Elimina de la lista antes de destruir
+            Destroy(component);
+            Debug.Log($"Componente {component.name} destruido después de {delay} segundos.");
         }
-        Components.Clear();
-        Debug.Log("Componentes eliminados.");
     }
+
 
     private void StartMouseShake()
     {

@@ -55,11 +55,11 @@ TagManager:
   - name: Foreground
     uniqueID: 9684173
     locked: 0
-  - name: DangerLayer
-    uniqueID: 1803850749
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: DangerLayer
+    uniqueID: 1803850749
     locked: 0
   m_RenderingLayers:
   - Default

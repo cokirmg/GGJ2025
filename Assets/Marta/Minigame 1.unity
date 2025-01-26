@@ -621,7 +621,7 @@ Animator:
   m_GameObject: {fileID: 218507326}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bf852fccb5988fa4f9425984e8beb8ca, type: 2}
+  m_Controller: {fileID: 9100000, guid: cf8904c691723e146abe5c889a18dc71, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6338,8 +6338,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Click and move the components
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 23a88bbd35162c04795d9558ad3c0e89, type: 2}
-  m_sharedMaterial: {fileID: -3373827501889280649, guid: 23a88bbd35162c04795d9558ad3c0e89, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 29fa9749cb313ca4aafb68260c32d995, type: 2}
+  m_sharedMaterial: {fileID: -3373827501889280649, guid: 29fa9749cb313ca4aafb68260c32d995, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -13,12 +13,16 @@ public class Enemy_HorMov : MonoBehaviour
     public GameObject dir;
     private Animator animator;
 
+    [SerializeField] public GameObject bubbleDie;
+    [SerializeField] BoxCollider2D box1;
+    [SerializeField]private BoxCollider2D box2;
     private void Start()
     {
+        bubbleDie.SetActive(false);
         animator = GetComponent<Animator>();
         if (animator != null)
         {
-            animator.SetBool("Andar", false); 
+            //animator.SetBool("Andar", false); 
         }
     }
 
@@ -72,8 +76,17 @@ public class Enemy_HorMov : MonoBehaviour
 
         if (collision.CompareTag("Bubble"))
         {
+            
+            box1.enabled = false;
+            box2.enabled = true;
             isStopped = true;
-            UpdateAnimation(false); 
+            if (!bubbleDie.activeInHierarchy)
+            {
+                Debug.Log("No está activo");
+            }
+            animator.enabled = false;
+            //UpdateAnimation(false); 
+            bubbleDie.SetActive(true);
         }
     }
 
@@ -82,6 +95,7 @@ public class Enemy_HorMov : MonoBehaviour
 
         if (collision.CompareTag("Bubble"))
         {
+            bubbleDie.SetActive(true);
             isStopped = false;
             UpdateAnimation(true);
         }

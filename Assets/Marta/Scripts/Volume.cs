@@ -11,14 +11,14 @@ public class Volume : MonoBehaviour
     {
         slider.value = PlayerPrefs.GetFloat("audioVolume", 0.5f);
         AudioListener.volume = slider.value;
-        Muted();
+        //Muted();
     }
     public void changeValue(float audioValue)
     {
         sliderValue = audioValue;
         PlayerPrefs.SetFloat("audioVolume", sliderValue);
         AudioListener.volume = slider.value;
-        Muted();
+        //Muted();
     }
 
     public void Muted()

@@ -345,6 +345,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pina_voladora
       objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 35d103199845b9444ad6fca510644de9, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 35d103199845b9444ad6fca510644de9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6

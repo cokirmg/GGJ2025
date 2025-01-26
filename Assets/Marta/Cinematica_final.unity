@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 781150223}
-  escenaSiguiente: Minigame 1
+  escenaSiguiente: Menu_inicio
 --- !u!328 &781150223
 VideoPlayer:
   m_ObjectHideFlags: 0

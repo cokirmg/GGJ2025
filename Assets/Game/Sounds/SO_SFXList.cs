@@ -10,18 +10,22 @@ public class SO_SFXList : ScriptableObject
 
     private Dictionary<SFX_Type, AudioClip> soundDictionary;
 
-    private void OnValidate()
+    private void OnEnable()
     {
-        soundDictionary = new Dictionary<SFX_Type, AudioClip>();
-
-        //Rellena el diccionario con la lista de SFX
-        foreach (var soundEffect in soundEffects)
+        if(soundDictionary == null)
         {
-            if(!soundDictionary.ContainsKey(soundEffect.type))
+            soundDictionary = new Dictionary<SFX_Type, AudioClip>();
+
+            //Rellena el diccionario con la lista de SFX
+            foreach (var soundEffect in soundEffects)
             {
-                soundDictionary.Add(soundEffect.type, soundEffect.SFX);
+                if (!soundDictionary.ContainsKey(soundEffect.type))
+                {
+                    soundDictionary.Add(soundEffect.type, soundEffect.SFX);
+                }
             }
         }
+
     }
 
     //Devuelve un sonido asociado a un tipo de SFX desde cualquier sitio. 

@@ -19,8 +19,6 @@ MonoBehaviour:
     type: 1
   - SFX: {fileID: 8300000, guid: 1351809c559fc134ba6adc6568228467, type: 3}
     type: 2
-  - SFX: {fileID: 8300000, guid: f9e65772cef59a141bd636e143ac649c, type: 3}
-    type: 3
   - SFX: {fileID: 8300000, guid: 3e4af6dd5bdb3b7418e191f0baf67b6f, type: 3}
     type: 4
   - SFX: {fileID: 8300000, guid: 9e5f47919f21cec49955958ef11e72d4, type: 3}
@@ -33,5 +31,7 @@ MonoBehaviour:
     type: 8
   - SFX: {fileID: 8300000, guid: 5ef25e5a7f9b0d340ac3389139a1e721, type: 3}
     type: 8
+  - SFX: {fileID: 8300000, guid: 078db2ab0e2eed44fa5973d0b791aae4, type: 3}
+    type: 10
   - SFX: {fileID: 8300000, guid: 078db2ab0e2eed44fa5973d0b791aae4, type: 3}
     type: 10

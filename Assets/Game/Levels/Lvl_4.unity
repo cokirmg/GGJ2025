@@ -580,6 +580,10 @@ PrefabInstance:
       propertyPath: 'waypointList.Array.data[1]'
       value: 
       objectReference: {fileID: 2001260048}
+    - target: {fileID: 1802275229319515332, guid: c45b0f1d35d0c054ab161cc6f3767a78, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1831534973478789406, guid: c45b0f1d35d0c054ab161cc6f3767a78, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.02

@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 
-public class Minigame_Manager : MonoBehaviour
+
+public class Minijuego : MonoBehaviour
 {
     public Transform GastricAcid;
     public GameObject Burpee;
@@ -18,7 +19,7 @@ public class Minigame_Manager : MonoBehaviour
 
     private void Start()
     {
-        // Aseg煤rate de que Burpee est茅 inicialmente desactivado
+        
         Burpee.SetActive(false);
     }
 
@@ -48,7 +49,7 @@ public class Minigame_Manager : MonoBehaviour
 
     private void StartMouseShake()
     {
-        Debug.Log("Mueve el rat贸n para instanciar el Burpee.");
+        Debug.Log("Mueve el rat髇 para instanciar el Burpee.");
         isShaking = true;
         mouseDistance = 0f;
         lastMousePosition = Input.mousePosition;
@@ -92,20 +93,13 @@ public class Minigame_Manager : MonoBehaviour
 
     private IEnumerator PlayBurpeeAnimations(Animator burpeeAnimator)
     {
-        // Comienza con la animaci贸n de "Idle"
         burpeeAnimator.SetTrigger("Idle");
+        yield return new WaitForSeconds(1.5f); // Duraci髇 de la animaci髇 "Idle"
 
-        // Esperar a que termine la animaci贸n "Idle"
-        yield return new WaitForSeconds(burpeeAnimator.GetCurrentAnimatorStateInfo(0).length);
-
-        // Activar la animaci贸n de "Birth"
         burpeeAnimator.SetTrigger("Birth");
+        yield return new WaitForSeconds(10f); // Duraci髇 de la animaci髇 "Birth"
 
-        // Esperar a que termine la animaci贸n "Birth"
-        float birthAnimationTime = burpeeAnimator.GetCurrentAnimatorStateInfo(0).length;
-        yield return new WaitForSeconds(birthAnimationTime);
-
-        // Cambiar a la escena del nivel 1
-        SceneManager.LoadScene("Level_1");
+        Debug.Log("Cambiando a la escena 'Lvl_1'...");
+        SceneManager.LoadScene("Lvl_1");
     }
 }
